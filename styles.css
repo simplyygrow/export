@@ -233,16 +233,19 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 12px 24px;
-  color: var(--text-light);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--accent);
+  color: var(--bg-dark);
   border-radius: var(--radius-pill);
+  font-weight: 700;
   transition: var(--transition);
   white-space: nowrap;
 }
 .nav-cta:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255, 85, 0, 0.35);
 }
+
 
 /* ======= FLOATING DOCK ======= */
 .floating-dock {
