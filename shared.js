@@ -12,6 +12,16 @@ function initPreloader() {
   const preloader = document.getElementById('preloader');
   if (!preloader) return;
 
+  // Only run preloader once per tab session (prevents showing on every subpage click)
+  if (sessionStorage.getItem('indoroute_visited')) {
+    preloader.style.transition = 'none';
+    preloader.style.display = 'none';
+    return;
+  }
+
+  // Mark session as visited
+  sessionStorage.setItem('indoroute_visited', 'true');
+
   const startTime = Date.now();
   const minDuration = 2000; // 2 seconds minimum visibility
 
@@ -30,6 +40,7 @@ function initPreloader() {
     preloader.classList.add('fade-out');
   }, 5000);
 }
+
 
 
 
