@@ -3,17 +3,17 @@
 
 :root {
   --bg-dark: #0A0A0A;
-  --bg-light: #EBEBE6;
-  --accent: #CDFF1A;
-  --accent-dark: #b8e616;
-  --text-light: #F5F5F5;
-  --text-muted: #888888;
-  --text-dark: #1a1a1a;
-  --text-dark-muted: #666666;
-  --card-dark: #141414;
-  --card-border: #2a2a2a;
+  --bg-light: #F7F7F7;
+  --accent: #FF5500;
+  --accent-dark: #E04B00;
+  --text-light: #FFFFFF;
+  --text-muted: #8E8E93;
+  --text-dark: #1A1A1A;
+  --text-dark-muted: #636366;
+  --card-dark: #121212;
+  --card-border: #1E1E1F;
   --card-light: #ffffff;
-  --card-light-border: #d5d5d0;
+  --card-light-border: #E5E5EA;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'Space Mono', monospace;
   --max-width: 1400px;
@@ -182,19 +182,29 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 }
 
 .nav-logo {
-  width: 40px;
-  height: 40px;
-  background: var(--accent);
-  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 900;
-  font-size: 1.1rem;
-  color: var(--bg-dark);
   flex-shrink: 0;
+  overflow: hidden;
 }
-.nav-logo svg { width: 22px; height: 22px; }
+.nav-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 
 .nav-links {
   display: flex;
@@ -1404,14 +1414,6 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   white-space: nowrap;
 }
 
-/* ======= NAV LOGO TEXT ======= */
-.nav-logo {
-  font-family: var(--font-mono);
-  font-weight: 900;
-  font-size: 0.85rem;
-  color: var(--bg-dark);
-  letter-spacing: 0.05em;
-}
 
 /* ======= PILLARS GRID (Why Choose Us) ======= */
 .pillars-grid {
