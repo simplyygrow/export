@@ -1,10 +1,28 @@
 // ======= SHARED JS - Indo Route Export =======
 
 document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
   initScrollAnimations();
   initFloatingDock();
   initContactForm();
 });
+
+// ======= PRELOADER OVERLAY FADE-OUT =======
+function initPreloader() {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+
+  // Fade out preloader on window load (to ensure all resources are loaded)
+  window.addEventListener('load', () => {
+    preloader.classList.add('fade-out');
+  });
+
+  // Fallback in case window load doesn't trigger quickly
+  setTimeout(() => {
+    preloader.classList.add('fade-out');
+  }, 3000);
+}
+
 
 // ======= SCROLL FADE-IN ANIMATIONS =======
 function initScrollAnimations() {
