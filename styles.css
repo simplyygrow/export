@@ -1721,7 +1721,7 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   opacity: 0;
   z-index: 2;
   animation: letterAnim 4s linear infinite;
-  color: white;
+  color: var(--accent); /* Premium brand accent color instead of white */
 }
 
 /* Preloader Background Repeating Mask */
@@ -1762,3 +1762,41 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   }
 }
 
+/* Preloader Keyframes Animations */
+@keyframes transformAnim {
+  0% {
+    transform: translate(-55%);
+  }
+  100% {
+    transform: translate(55%);
+  }
+}
+
+@keyframes opacityAnim {
+  0%, 100% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+}
+
+@keyframes letterAnim {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+    text-shadow: 0 0 8px var(--accent); /* Accent glow */
+    transform: scale(1.1) translateY(-2px);
+  }
+  20% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}

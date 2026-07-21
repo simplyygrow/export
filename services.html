@@ -13,6 +13,12 @@
   <!-- PRELOADER -->
   <div class="preloader-overlay" id="preloader">
     <div class="loading-lines-container">
+      <!-- Animated Masked Color Gradients swapped to render first in DOM -->
+      <div class="loader-bg-container">
+        <div class="loader-bg-animated"></div>
+      </div>
+      
+      <!-- Letters with incremental animation delays -->
       <span class="loading-letter" style="animation-delay: 0.1s;">L</span>
       <span class="loading-letter" style="animation-delay: 0.205s;">o</span>
       <span class="loading-letter" style="animation-delay: 0.31s;">a</span>
@@ -20,11 +26,9 @@
       <span class="loading-letter" style="animation-delay: 0.52s;">i</span>
       <span class="loading-letter" style="animation-delay: 0.625s;">n</span>
       <span class="loading-letter" style="animation-delay: 0.73s;">g</span>
-      <div class="loader-bg-container">
-        <div class="loader-bg-animated"></div>
-      </div>
     </div>
   </div>
+
 
   <!-- NAV -->
   <nav class="nav-header">
