@@ -4,8 +4,8 @@
 :root {
   --bg-dark: #0A0A0A;
   --bg-light: #F7F7F7;
-  --accent: #FF5500;
-  --accent-dark: #E04B00;
+  --accent: #28a9e2;
+  --accent-dark: #1b8ec2;
   --text-light: #FFFFFF;
   --text-muted: #8E8E93;
   --text-dark: #1A1A1A;
@@ -182,29 +182,23 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 }
 
 .nav-logo {
-  width: 42px;
-  height: 42px;
+  width: 130px;
+  height: 44px;
   background: transparent;
-  border-radius: 50%; /* Make circular */
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-shrink: 0;
-  overflow: hidden;
 }
 .nav-logo img {
-  width: 85%;
-  height: 85%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
 .footer-logo {
-  width: 36px;
+  width: 110px;
   height: 36px;
-  border-radius: 50%; /* Make circular */
   object-fit: contain;
-  padding: 3px;
-  background: var(--bg-dark);
 }
 
 
@@ -1183,19 +1177,17 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   margin-bottom: 32px;
 }
 .start-sidebar-logo {
-  width: 48px;
-  height: 48px;
-  background: var(--bg-dark); /* Solid dark background for contrast */
-  border-radius: 50%; /* Circle! */
+  width: 140px;
+  height: 46px;
+  background: transparent;
   display: flex;
   align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 
 .start-sidebar-logo img {
-  width: 85%;
-  height: 85%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
