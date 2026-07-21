@@ -291,11 +291,23 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   width: 36px;
   height: 36px;
   position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
 }
-.dock-progress svg {
+.dock-progress:hover {
+  transform: scale(1.1);
+}
+.progress-ring-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 36px;
   height: 36px;
   transform: rotate(-90deg);
+  z-index: 1;
 }
 .dock-progress-bg { stroke: #333; fill: none; stroke-width: 2; }
 .dock-progress-fill {
@@ -307,6 +319,22 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   stroke-dashoffset: 100;
   transition: stroke-dashoffset 0.2s ease;
 }
+.dock-arrow-icon {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  z-index: 2;
+  stroke: var(--text-light);
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: var(--transition);
+}
+.dock-progress:hover .dock-arrow-icon {
+  stroke: var(--accent);
+}
+
 
 .dock-cta {
   font-family: var(--font-mono);

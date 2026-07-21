@@ -98,7 +98,19 @@ function initFloatingDock() {
       progressFill.style.strokeDashoffset = circumference * (1 - pct);
     }
   });
+
+  // Scroll to top on progress indicator click
+  const progressContainer = dock.querySelector('.dock-progress');
+  if (progressContainer) {
+    progressContainer.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 }
+
 
 // ======= NAV ACTIVE STATE =======
 function setActiveNav() {
