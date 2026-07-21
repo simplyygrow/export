@@ -12,16 +12,25 @@ function initPreloader() {
   const preloader = document.getElementById('preloader');
   if (!preloader) return;
 
-  // Fade out preloader on window load (to ensure all resources are loaded)
+  const startTime = Date.now();
+  const minDuration = 2000; // 2 seconds minimum visibility
+
+  // Fade out preloader once window is loaded plus minimum duration check
   window.addEventListener('load', () => {
-    preloader.classList.add('fade-out');
+    const elapsed = Date.now() - startTime;
+    const remaining = Math.max(0, minDuration - elapsed);
+
+    setTimeout(() => {
+      preloader.classList.add('fade-out');
+    }, remaining);
   });
 
   // Fallback in case window load doesn't trigger quickly
   setTimeout(() => {
     preloader.classList.add('fade-out');
-  }, 3000);
+  }, 5000);
 }
+
 
 
 // ======= SCROLL FADE-IN ANIMATIONS =======
