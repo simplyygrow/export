@@ -172,11 +172,13 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(10, 10, 10, 0.85);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 10, 10, 0.45); /* Glassmorphic dark */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-pill);
   padding: 8px 8px 8px 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 .nav-logo {
@@ -242,15 +244,17 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   display: flex;
   align-items: center;
   gap: 16px;
-  background: rgba(10, 10, 10, 0.9);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 10, 10, 0.5); /* Glassmorphic dark */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-pill);
   padding: 10px 12px 10px 24px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease, transform 0.4s ease;
   transform: translateX(-50%) translateY(20px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
 }
 .floating-dock.visible {
   opacity: 1;
@@ -1121,10 +1125,13 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 }
 
 .start-sidebar {
-  background: var(--card-light);
-  border: 1px solid var(--card-light-border);
+  background: rgba(255, 255, 255, 0.45); /* Glassmorphic light */
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: var(--radius);
   padding: 40px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
 }
 .start-sidebar-brand {
   display: flex;
@@ -1193,10 +1200,13 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 }
 
 .start-form-panel {
-  background: var(--card-light);
-  border: 1px solid var(--card-light-border);
+  background: rgba(255, 255, 255, 0.45); /* Glassmorphic light */
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: var(--radius);
   padding: 40px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
 }
 .form-header-label {
   font-family: var(--font-mono);
@@ -1410,11 +1420,14 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   gap: 24px;
 }
 .pillar-card {
-  background: var(--card-light);
-  border: 1px solid var(--card-light-border);
+  background: rgba(255, 255, 255, 0.45); /* Glassmorphic light */
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: var(--radius);
   padding: 40px 32px;
   transition: var(--transition);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03);
 }
 .pillar-card:hover {
   box-shadow: 0 20px 60px rgba(0,0,0,0.08);
@@ -1514,13 +1527,16 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   flex-wrap: wrap;
 }
 .cert-badge-item {
-  background: var(--card-light);
-  border: 1px solid var(--card-light-border);
+  background: rgba(255, 255, 255, 0.45); /* Glassmorphic light */
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: var(--radius);
   padding: 32px 40px;
   text-align: center;
   min-width: 200px;
   transition: var(--transition);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03);
 }
 .cert-badge-item:hover {
   box-shadow: 0 12px 40px rgba(0,0,0,0.06);
@@ -1551,13 +1567,16 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   gap: 24px;
 }
 .product-card {
-  background: var(--card-light);
-  border: 1px solid var(--card-light-border);
+  background: rgba(255, 255, 255, 0.45); /* Glassmorphic light */
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: var(--radius);
   overflow: hidden;
   display: grid;
   grid-template-columns: 140px 1fr;
   transition: var(--transition);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03);
 }
 .product-card:hover {
   box-shadow: 0 20px 60px rgba(0,0,0,0.08);
@@ -1614,11 +1633,14 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   gap: 24px;
 }
 .cert-explain-card {
-  background: var(--card-light);
-  border: 1px solid var(--card-light-border);
+  background: rgba(255, 255, 255, 0.45); /* Glassmorphic light */
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: var(--radius);
   padding: 40px 32px;
   transition: var(--transition);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03);
 }
 .cert-explain-card:hover {
   box-shadow: 0 20px 60px rgba(0,0,0,0.08);
