@@ -12,8 +12,11 @@ function initPreloader() {
   const preloader = document.getElementById('preloader');
   if (!preloader) return;
 
-  // Only run preloader once per tab session (prevents showing on every subpage click)
-  if (sessionStorage.getItem('indoroute_visited')) {
+  // Only run preloader once per tab session (prevents showing on every subpage click).
+  // However, if the user reloads/refreshes the page, show it.
+  const isReload = performance.getEntriesByType('navigation')[0]?.type === 'reload' || performance.navigation?.type === 1;
+
+  if (sessionStorage.getItem('indoroute_visited') && !isReload) {
     preloader.style.transition = 'none';
     preloader.style.display = 'none';
     return;
