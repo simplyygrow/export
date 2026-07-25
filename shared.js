@@ -229,6 +229,34 @@ function initContactForm() {
     }
   });
 
+  // Clear error styling on input/change
+  const clearError = (inputEl, errorId) => {
+    inputEl.classList.remove('error');
+    const errorEl = document.getElementById(errorId);
+    if (errorEl) {
+      errorEl.textContent = '';
+      errorEl.classList.remove('visible');
+    }
+  };
+
+  const nameInput = document.getElementById('contactName');
+  if (nameInput) nameInput.addEventListener('input', () => clearError(nameInput, 'nameError'));
+
+  const companyInput = document.getElementById('contactCompany');
+  if (companyInput) companyInput.addEventListener('input', () => clearError(companyInput, 'companyError'));
+
+  const emailInput = document.getElementById('contactEmail');
+  if (emailInput) emailInput.addEventListener('input', () => clearError(emailInput, 'emailError'));
+
+  const countryInput = document.getElementById('contactCountry');
+  if (countryInput) countryInput.addEventListener('change', () => clearError(countryInput, 'countryError'));
+
+  const productInput = document.getElementById('contactProduct');
+  if (productInput) productInput.addEventListener('change', () => clearError(productInput, 'productError'));
+
+  const messageInput = document.getElementById('contactMessage');
+  if (messageInput) messageInput.addEventListener('input', () => clearError(messageInput, 'messageError'));
+
   function showError(errorId, input, message) {
     const errorEl = document.getElementById(errorId);
     if (errorEl) {
