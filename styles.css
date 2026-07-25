@@ -179,6 +179,14 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   border-radius: var(--radius-pill);
   padding: 8px 8px 8px 16px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition: background var(--transition), border var(--transition), padding var(--transition), box-shadow var(--transition);
+}
+
+.nav-header.scrolled {
+  background: rgba(10, 10, 10, 0.92); /* Solid dark premium appearance with sufficient opacity */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+  padding: 6px 8px 6px 16px; /* Slightly slim down on scroll for a premium feel */
 }
 
 .nav-logo {
@@ -261,10 +269,10 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   display: flex;
   align-items: center;
   gap: 16px;
-  background: rgba(10, 10, 10, 0.5); /* Glassmorphic dark */
+  background: rgba(10, 10, 10, 0.9); /* Glassmorphic dark with high opacity for readability */
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-pill);
   padding: 10px 12px 10px 24px;
   opacity: 0;
@@ -284,7 +292,8 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-light); /* High contrast white at 100% opacity */
+  font-weight: 700; /* Bold for readable text */
   min-width: 100px;
   text-align: center;
 }

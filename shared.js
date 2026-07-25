@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPreloader();
   initScrollAnimations();
   initFloatingDock();
+  initNavbarScroll();
   initContactForm();
 });
 
@@ -112,6 +113,24 @@ function initFloatingDock() {
       });
     });
   }
+}
+
+
+// ======= NAV SCROLL EFFECT =======
+function initNavbarScroll() {
+  const header = document.querySelector('.nav-header');
+  if (!header) return;
+
+  const handleScroll = () => {
+    if (window.scrollY > 40) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll();
 }
 
 
