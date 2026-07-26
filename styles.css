@@ -478,18 +478,19 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   margin-bottom: 24px;
 }
 .trusted-logos {
-  display: flex;
-  align-items: center;
-  gap: 48px;
+  display: block;
+  position: relative;
   overflow: hidden;
+  width: 100%;
   mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
   -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
 }
 .trusted-logos-track {
   display: flex;
+  width: max-content;
   align-items: center;
   gap: 48px;
-  animation: marquee 20s linear infinite;
+  animation: marquee 25s linear infinite;
 }
 .trusted-logo {
   display: flex;
@@ -733,6 +734,39 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 .work-card:hover .tag-pill {
   border-color: rgba(255, 255, 255, 0.15);
   color: var(--text-light);
+}
+
+/* Section Light Card Contrast Enhancements */
+.section-light .work-card {
+  background: var(--card-light);
+  border: 1px solid var(--card-light-border);
+  box-shadow: var(--shadow-sm);
+}
+.section-light .work-card:hover {
+  box-shadow: var(--shadow-md), 0 0 25px rgba(40, 169, 226, 0.15);
+  border-color: rgba(40, 169, 226, 0.3);
+}
+.section-light .card-title {
+  color: var(--text-dark);
+}
+.section-light .card-desc {
+  color: var(--text-dark-muted);
+}
+.section-light .tag-pill {
+  background: rgba(15, 23, 42, 0.03);
+  border-color: var(--card-light-border);
+  color: var(--text-dark-muted);
+}
+.section-light .work-card:hover .tag-pill {
+  border-color: rgba(40, 169, 226, 0.2);
+  color: var(--accent);
+}
+.section-light .card-icon-container {
+  background: rgba(40, 169, 226, 0.05);
+}
+.section-light .work-card:hover .card-icon-container {
+  background: var(--accent);
+  color: var(--bg-dark);
 }
 
 /* ======= BILLBOARD CTA ======= */
