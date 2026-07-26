@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFloatingDock();
   initNavbarScroll();
   initContactForm();
+  initMobileMenu();
 });
 
 // ======= PRELOADER OVERLAY FADE-OUT =======
@@ -101,7 +102,7 @@ function initFloatingDock() {
       progressFill.style.strokeDasharray = circumference;
       progressFill.style.strokeDashoffset = circumference * (1 - pct);
     }
-  });
+  }, { passive: true });
 
   // Scroll to top on progress indicator click
   const progressContainer = dock.querySelector('.dock-progress');
@@ -129,7 +130,7 @@ function initNavbarScroll() {
     }
   };
 
-  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 }
 
@@ -265,4 +266,44 @@ function initContactForm() {
     }
     if (input) input.classList.add('error');
   }
+}
+
+// ======= MOBILE HAMBURGER MENU =======
+function initMobileMenu() {
+  const header = document.querySelector('.nav-header');
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelectorAll('.nav-link');
+
+  if (!toggle || !header) return;
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    header.classList.toggle('nav-open');
+    const icon = toggle.querySelector('i');
+    if (icon) {
+      if (header.classList.contains('nav-open')) {
+        icon.className = 'fas fa-times';
+      } else {
+        icon.className = 'fas fa-bars';
+      }
+    }
+  });
+
+  // Close menu when clicking user options/links
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      header.classList.remove('nav-open');
+      const icon = toggle.querySelector('i');
+      if (icon) icon.className = 'fas fa-bars';
+    });
+  });
+
+  // Close menu on clicking active site area outside navbar
+  document.addEventListener('click', (e) => {
+    if (header.classList.contains('nav-open') && !header.contains(e.target)) {
+      header.classList.remove('nav-open');
+      const icon = toggle.querySelector('i');
+      if (icon) icon.className = 'fas fa-bars';
+    }
+  });
 }

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Indo Route Export — Fresh Agri Products, From Farms to Consumers</title>
   <meta name="description" content="A Gujarat-based agri-export company delivering high-quality Indian spices and agricultural commodities, backed by owned farmland and direct farmer sourcing.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%2328a9e2'/><text x='16' y='22' text-anchor='middle' font-size='14' font-weight='900' fill='%230A0A0A'>IR</text></svg>">
 </head>
@@ -33,13 +34,17 @@
   <!-- NAV -->
 
   <nav class="nav-header" id="mainNav">
-    <a href="index.html" class="nav-logo"><img src="logo.png" alt="Indo Route Export Logo"></a>
+    <a href="index.html" class="nav-logo"><img src="logo.png" alt="Indo Route Export Logo" width="130" height="44"></a>
     <div class="nav-links">
       <a href="index.html" class="nav-link active">Home</a>
       <a href="services.html" class="nav-link">Services</a>
       <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-cta mobile-only-cta">Get a Quote</a>
     </div>
     <a href="contact.html" class="nav-cta">Get a Quote</a>
+    <button class="nav-toggle" aria-label="Toggle Mobile Menu">
+      <i class="fas fa-bars"></i>
+    </button>
   </nav>
 
   <!-- FLOATING DOCK -->
@@ -143,7 +148,7 @@
           <a href="services.html" class="btn-outline light" style="margin-top:24px;">Learn More About Our Services →</a>
         </div>
         <div class="about-teaser-image fade-up">
-          <img src="poster-chillies.jpg" alt="Spice Drying Farm Field" loading="lazy">
+          <img src="poster-chillies.jpg" alt="Spice Drying Farm Field" loading="lazy" width="600" height="400">
         </div>
       </div>
     </div>
@@ -157,147 +162,107 @@
       <h2 class="selected-work-heading fade-up">India's finest spices, <span class="muted">export-ready.</span></h2>
 
       <div class="work-grid products-grid">
-        <a href="services.html" class="work-card fade-up" style="background:linear-gradient(135deg,#1a1a0a,#2a2a10);">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:40px;">
-            <div style="text-align:center;">
-              <div style="font-size:3rem;margin-bottom:12px;">🫘</div>
-              <div style="font-size:1.3rem;font-weight:700;color:#fff;">Cumin Seed</div>
-              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px;font-family:var(--font-mono);letter-spacing:0.1em;text-transform:uppercase;">Indian Spice</div>
-            </div>
+        <a href="services.html" class="work-card fade-up" style="background: linear-gradient(135deg,rgba(40,169,226,0.03),rgba(10,13,16,0.5));">
+          <div class="card-icon-container">🫘</div>
+          <div class="card-content-block">
+            <span class="card-category">Indian Spice</span>
+            <h3 class="card-title">Cumin Seed</h3>
+            <p class="card-desc">Export-grade cumin sourced directly from Gujarat farms</p>
           </div>
-          <div class="work-card-overlay">
-            <div class="work-card-tags">
-              <span class="work-tag">Gujarat Farms</span>
-              <span class="work-tag">Direct Sourcing</span>
-            </div>
-            <div class="work-card-name">Cumin Seed</div>
-            <div class="work-card-desc">Export-grade cumin sourced directly from Gujarat farms</div>
+          <div class="card-tag-row">
+            <span class="tag-pill">Gujarat Farms</span>
+            <span class="tag-pill">Direct Sourcing</span>
           </div>
         </a>
 
-        <a href="services.html" class="work-card fade-up" style="background:linear-gradient(135deg,#0a1a0a,#103010);">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:40px;">
-            <div style="text-align:center;">
-              <div style="font-size:3rem;margin-bottom:12px;">🌿</div>
-              <div style="font-size:1.3rem;font-weight:700;color:#fff;">Coriander Seed</div>
-              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px;font-family:var(--font-mono);letter-spacing:0.1em;text-transform:uppercase;">Indian Spice</div>
-            </div>
+        <a href="services.html" class="work-card fade-up" style="background: linear-gradient(135deg,rgba(40,169,226,0.03),rgba(10,13,16,0.5));">
+          <div class="card-icon-container">🌿</div>
+          <div class="card-content-block">
+            <span class="card-category">Indian Spice</span>
+            <h3 class="card-title">Coriander Seed</h3>
+            <p class="card-desc">Premium quality coriander, cleaned and export-ready</p>
           </div>
-          <div class="work-card-overlay">
-            <div class="work-card-tags">
-              <span class="work-tag">Cleaned</span>
-              <span class="work-tag">Export-ready</span>
-            </div>
-            <div class="work-card-name">Coriander Seed</div>
-            <div class="work-card-desc">Premium quality coriander, cleaned and export-ready</div>
+          <div class="card-tag-row">
+            <span class="tag-pill">Cleaned</span>
+            <span class="tag-pill">Export-ready</span>
           </div>
         </a>
 
-        <a href="services.html" class="work-card fade-up" style="background:linear-gradient(135deg,#2a2a10,#4a4a15);">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:40px;">
-            <div style="text-align:center;">
-              <div style="font-size:3rem;margin-bottom:12px;">⚪</div>
-              <div style="font-size:1.3rem;font-weight:700;color:#fff;">Sesame Seed</div>
-              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px;font-family:var(--font-mono);letter-spacing:0.1em;text-transform:uppercase;">Oil Seed</div>
-            </div>
+        <a href="services.html" class="work-card fade-up" style="background: linear-gradient(135deg,rgba(40,169,226,0.03),rgba(10,13,16,0.5));">
+          <div class="card-icon-container">⚪</div>
+          <div class="card-content-block">
+            <span class="card-category">Oil Seed</span>
+            <h3 class="card-title">Sesame Seed</h3>
+            <p class="card-desc">Consistent quality sesame for global buyers</p>
           </div>
-          <div class="work-card-overlay">
-            <div class="work-card-tags">
-              <span class="work-tag">Global Quality</span>
-              <span class="work-tag">Consistent Supply</span>
-            </div>
-            <div class="work-card-name">Sesame Seed</div>
-            <div class="work-card-desc">Consistent quality sesame for global buyers</div>
+          <div class="card-tag-row">
+            <span class="tag-pill">Global Quality</span>
+            <span class="tag-pill">Consistent Supply</span>
           </div>
         </a>
 
-        <a href="services.html" class="work-card fade-up" style="background:linear-gradient(135deg,#1a1a0a,#3a3a10);">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:40px;">
-            <div style="text-align:center;">
-              <div style="font-size:3rem;margin-bottom:12px;">🌱</div>
-              <div style="font-size:1.3rem;font-weight:700;color:#fff;">Ajwain Seed</div>
-              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px;font-family:var(--font-mono);letter-spacing:0.1em;text-transform:uppercase;">Indian Spice</div>
-            </div>
+        <a href="services.html" class="work-card fade-up" style="background: linear-gradient(135deg,rgba(40,169,226,0.03),rgba(10,13,16,0.5));">
+          <div class="card-icon-container">🌱</div>
+          <div class="card-content-block">
+            <span class="card-category">Indian Spice</span>
+            <h3 class="card-title">Ajwain Seed</h3>
+            <p class="card-desc">Premium ajwain seeds sourced directly from trusted regional farms</p>
           </div>
-          <div class="work-card-overlay">
-            <div class="work-card-tags">
-              <span class="work-tag">Direct Sourcing</span>
-              <span class="work-tag">Trusted Farms</span>
-            </div>
-            <div class="work-card-name">Ajwain Seed</div>
-            <div class="work-card-desc">Sourced directly from trusted farms</div>
+          <div class="card-tag-row">
+            <span class="tag-pill">Direct Sourcing</span>
+            <span class="tag-pill">Trusted Farms</span>
           </div>
         </a>
 
-        <a href="services.html" class="work-card fade-up" style="background:linear-gradient(135deg,#1a1500,#2a2000);">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:40px;">
-            <div style="text-align:center;">
-              <div style="font-size:3rem;margin-bottom:12px;">🟤</div>
-              <div style="font-size:1.3rem;font-weight:700;color:#fff;">Mustard Seed</div>
-              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px;font-family:var(--font-mono);letter-spacing:0.1em;text-transform:uppercase;">Oil Seed</div>
-            </div>
+        <a href="services.html" class="work-card fade-up" style="background: linear-gradient(135deg,rgba(40,169,226,0.03),rgba(10,13,16,0.5));">
+          <div class="card-icon-container">🟤</div>
+          <div class="card-content-block">
+            <span class="card-category">Oil Seed</span>
+            <h3 class="card-title">Mustard Seed</h3>
+            <p class="card-desc">Reliable supply of premium quality export-grade mustard seeds</p>
           </div>
-          <div class="work-card-overlay">
-            <div class="work-card-tags">
-              <span class="work-tag">Reliable Supply</span>
-              <span class="work-tag">Export Grade</span>
-            </div>
-            <div class="work-card-name">Mustard Seed</div>
-            <div class="work-card-desc">Reliable supply, export-grade quality</div>
+          <div class="card-tag-row">
+            <span class="tag-pill">Reliable Supply</span>
+            <span class="tag-pill">Export Grade</span>
           </div>
         </a>
 
-        <a href="services.html" class="work-card fade-up" style="background:linear-gradient(135deg,#2a0a0a,#4a1a00);">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:40px;">
-            <div style="text-align:center;">
-              <div style="font-size:3rem;margin-bottom:12px;">🧅</div>
-              <div style="font-size:1.3rem;font-weight:700;color:#fff;">Onion</div>
-              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px;font-family:var(--font-mono);letter-spacing:0.1em;text-transform:uppercase;">Fresh Produce</div>
-            </div>
+        <a href="services.html" class="work-card fade-up" style="background: linear-gradient(135deg,rgba(40,169,226,0.03),rgba(10,13,16,0.5));">
+          <div class="card-icon-container">🧅</div>
+          <div class="card-content-block">
+            <span class="card-category">Fresh Produce</span>
+            <h3 class="card-title">Onion</h3>
+            <p class="card-desc">Fresh, sorted export-grade red and white onions</p>
           </div>
-          <div class="work-card-overlay">
-            <div class="work-card-tags">
-              <span class="work-tag">Fresh</span>
-              <span class="work-tag">Export Grade</span>
-            </div>
-            <div class="work-card-name">Onion</div>
-            <div class="work-card-desc">Fresh, export-grade onions</div>
+          <div class="card-tag-row">
+            <span class="tag-pill">Fresh</span>
+            <span class="tag-pill">Export Grade</span>
           </div>
         </a>
 
-        <a href="services.html" class="work-card fade-up" style="background:linear-gradient(135deg,#4a3000,#6a4a00);">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:40px;">
-            <div style="text-align:center;">
-              <div style="font-size:3rem;margin-bottom:12px;">🥭</div>
-              <div style="font-size:1.3rem;font-weight:700;color:#fff;">Alphonso Mango</div>
-              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px;font-family:var(--font-mono);letter-spacing:0.1em;text-transform:uppercase;">Fresh Fruit</div>
-            </div>
+        <a href="services.html" class="work-card fade-up" style="background: linear-gradient(135deg,rgba(40,169,226,0.03),rgba(10,13,16,0.5));">
+          <div class="card-icon-container">🥭</div>
+          <div class="card-content-block">
+            <span class="card-category">Fresh Fruit</span>
+            <h3 class="card-title">Alphonso Mango</h3>
+            <p class="card-desc">Premium Indian Alphonso mangoes, carefully export packed</p>
           </div>
-          <div class="work-card-overlay">
-            <div class="work-card-tags">
-              <span class="work-tag">Alphonso</span>
-              <span class="work-tag">Export Packed</span>
-            </div>
-            <div class="work-card-name">Alphonso Mango</div>
-            <div class="work-card-desc">Premium Indian mangoes, export packed</div>
+          <div class="card-tag-row">
+            <span class="tag-pill">Alphonso</span>
+            <span class="tag-pill">Export Packed</span>
           </div>
         </a>
 
-        <a href="services.html" class="work-card fade-up" style="background:linear-gradient(135deg,#3a3a00,#5a5a00);">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:40px;">
-            <div style="text-align:center;">
-              <div style="font-size:3rem;margin-bottom:12px;">🍌</div>
-              <div style="font-size:1.3rem;font-weight:700;color:#fff;">Banana</div>
-              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px;font-family:var(--font-mono);letter-spacing:0.1em;text-transform:uppercase;">Fresh Fruit</div>
-            </div>
+        <a href="services.html" class="work-card fade-up" style="background: linear-gradient(135deg,rgba(40,169,226,0.03),rgba(10,13,16,0.5));">
+          <div class="card-icon-container">🍌</div>
+          <div class="card-content-block">
+            <span class="card-category">Fresh Fruit</span>
+            <h3 class="card-title">Banana</h3>
+            <p class="card-desc">Fresh, green and semi-ripe export-ready bananas</p>
           </div>
-          <div class="work-card-overlay">
-            <div class="work-card-tags">
-              <span class="work-tag">Fresh</span>
-              <span class="work-tag">Export Ready</span>
-            </div>
-            <div class="work-card-name">Banana</div>
-            <div class="work-card-desc">Fresh, export-ready bananas</div>
+          <div class="card-tag-row">
+            <span class="tag-pill">Fresh</span>
+            <span class="tag-pill">Export Ready</span>
           </div>
         </a>
       </div>
@@ -380,7 +345,7 @@
       <div class="footer-top">
         <div>
           <div class="footer-brand-name">
-            <img src="logo.png" alt="Indo Route Export Logo" class="footer-logo" loading="lazy">
+            <img src="logo.png" alt="Indo Route Export Logo" class="footer-logo" loading="lazy" width="110" height="36">
             Indo Route Export
           </div>
           <p class="footer-brand-desc">Gujarat-based agri-export company delivering high-quality Indian spices and agricultural commodities.</p>
