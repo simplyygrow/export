@@ -788,7 +788,7 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 .billboard-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a2a0a 50%, #0a0a0a 100%);
+  background: linear-gradient(rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.65)), url('assets/Stats strip background/Aerial_photo_farmland_rows_haze_.jpeg') no-repeat center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1104,12 +1104,15 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 }
 .faq-item.active .faq-answer { max-height: 300px; }
 
-/* ======= FINAL CTA ======= */
 .final-cta-section {
   padding: 120px 5%;
   text-align: center;
 }
-.final-cta-section.dark { background: var(--bg-dark); color: var(--text-light); }
+.final-cta-section.dark {
+  background: linear-gradient(rgba(10, 13, 16, 0.8), rgba(10, 13, 16, 0.8)), url('assets/Closing CTA banner/CLOSING BANNER.jpeg') no-repeat center/cover;
+  color: var(--text-light);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
 .final-cta-section.light { background: var(--bg-light); color: var(--text-dark); }
 .final-cta-heading {
   font-size: clamp(2.5rem, 5.5vw, 4.5rem);
@@ -1218,9 +1221,9 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 
 /* ======= CASE STUDIES PAGE ======= */
 .cs-hero {
-  padding: 160px 5% 60px;
+  padding: 185px 5% 85px;
   text-align: center;
-  background: var(--bg-dark);
+  background: linear-gradient(rgba(10, 13, 16, 0.75), rgba(10, 13, 16, 0.75)), url('assets/SERVICE-PAGE/MAIN IMAGE.jpeg') no-repeat center/cover;
 }
 .cs-hero h1 {
   font-size: clamp(4rem, 10vw, 8rem);
@@ -1271,15 +1274,17 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   color: var(--text-dark);
 }
 .start-hero {
-  padding: 140px 5% 60px;
+  padding: 180px 5% 100px;
   text-align: center;
+  background: linear-gradient(rgba(10, 13, 16, 0.75), rgba(10, 13, 16, 0.75)), url('assets/CONTACT MAIN/CONTACT MAIN.jpeg') no-repeat center/cover;
+  color: var(--text-light);
 }
 .start-hero h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 500;
   line-height: 1.15;
 }
-.start-hero h1 .muted { color: var(--text-dark-muted); }
+.start-hero h1 .muted { color: rgba(255, 255, 255, 0.65); }
 .start-content {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
