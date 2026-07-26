@@ -1109,7 +1109,7 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   text-align: center;
 }
 .final-cta-section.dark {
-  background: linear-gradient(rgba(10, 13, 16, 0.8), rgba(10, 13, 16, 0.8)), url('assets/Closing CTA banner/CLOSING BANNER.jpeg') no-repeat center/cover;
+  background: linear-gradient(180deg, var(--bg-dark) 0%, #06080a 100%);
   color: var(--text-light);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
