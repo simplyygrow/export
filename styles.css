@@ -2109,8 +2109,14 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   .carousel-card { width: 280px; height: 200px; }
   .pillars-grid { grid-template-columns: 1fr; }
   .cert-badges-row { flex-direction: column; align-items: center; }
-  .product-card { grid-template-columns: 1fr; }
-  .product-card-visual { min-height: 80px; padding: 24px; }
+  .product-card { grid-template-columns: 1fr !important; }
+  .product-card-visual { 
+    width: 100% !important; 
+    height: 180px !important; 
+    border-right: none !important; 
+    border-bottom: 1px solid rgba(15, 23, 42, 0.05) !important;
+    padding: 0 !important;
+  }
   .product-card-content { padding: 24px 20px; }
   .service-card-content { padding: 32px 24px; }
 }
