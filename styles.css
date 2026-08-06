@@ -194,8 +194,8 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 }
 
 .nav-logo {
-  width: 175px;
-  height: 60px;
+  width: 220px;
+  height: 75px;
   background: transparent;
   display: flex;
   align-items: center;
@@ -1174,6 +1174,31 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   line-height: 1.6;
   max-width: 380px;
   margin-bottom: 32px;
+}
+.footer-socials {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  transition: var(--transition);
+}
+.footer-socials a:hover {
+  background: rgba(40, 169, 226, 0.1);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 169, 226, 0.2);
 }
 .footer-col-title {
   font-size: 1rem;
