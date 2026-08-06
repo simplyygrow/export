@@ -212,13 +212,16 @@ function initContactForm() {
     }
 
     if (isValid) {
-      // Success notification
+      // Success notification & Google Form connection
       const btn = form.querySelector('.form-submit');
       const originalText = btn.textContent;
-      btn.textContent = '✓ Inquiry Sent!';
+      btn.textContent = '✓ Inquiry Submitted!';
       btn.style.background = '#28a745';
       btn.style.color = '#fff';
       btn.disabled = true;
+
+      // Open connected Google Form in new tab
+      window.open('https://docs.google.com/forms/d/e/1FAIpQLSfTQPhrqVBl_HV4zQIjXuRCHvXHPKL7tzZ9gs3CijBtA47dqQ/viewform', '_blank');
 
       setTimeout(() => {
         btn.textContent = originalText;

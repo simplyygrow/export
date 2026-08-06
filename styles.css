@@ -208,10 +208,64 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 }
 
 .footer-logo {
-  width: 150px;
-  height: 50px;
+  width: 195px;
+  height: 65px;
   object-fit: contain;
 }
+
+.start-sidebar-logo {
+  width: 210px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.start-sidebar-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-social-links, .sidebar-social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.footer-social-icon, .sidebar-social-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-light);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.footer-social-icon:hover, .sidebar-social-icon:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(40, 169, 226, 0.4);
+}
+
+.section-light .sidebar-social-icon {
+  background: rgba(15, 23, 42, 0.05);
+  border-color: var(--card-light-border);
+  color: var(--text-dark);
+}
+.section-light .sidebar-social-icon:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg-dark);
+}
+
 
 
 .nav-links {
@@ -1174,31 +1228,6 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   line-height: 1.6;
   max-width: 380px;
   margin-bottom: 32px;
-}
-.footer-socials {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-.footer-socials a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
-  font-size: 1.15rem;
-  transition: var(--transition);
-}
-.footer-socials a:hover {
-  background: rgba(40, 169, 226, 0.1);
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(40, 169, 226, 0.2);
 }
 .footer-col-title {
   font-size: 1rem;
