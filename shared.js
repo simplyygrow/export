@@ -215,21 +215,98 @@ function initContactForm() {
       // Success notification & Google Form connection
       const btn = form.querySelector('.form-submit');
       const originalText = btn.textContent;
-      btn.textContent = '✓ Inquiry Submitted!';
-      btn.style.background = '#28a745';
-      btn.style.color = '#fff';
+      btn.textContent = 'Sending Inquiry...';
+      btn.style.opacity = '0.7';
       btn.disabled = true;
 
-      // Open connected Google Form in new tab
-      window.open('https://docs.google.com/forms/d/e/1FAIpQLSfTQPhrqVBl_HV4zQIjXuRCHvXHPKL7tzZ9gs3CijBtA47dqQ/viewform', '_blank');
+      // Google Form Submission Endpoint
+      const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfTQPhrqVBl_HV4zQIjXuRCHvXHPKL7tzZ9gs3CijBtA47dqQ/formResponse';
 
+      // Map frontend form data to Google Form entry IDs
+      const formData = new URLSearchParams();
+      formData.append('entry.1049015684', name.value.trim());     // Your Name
+      formData.append('entry.180032542', company.value.trim());   // Company Name
+      formData.append('entry.1421793675', email.value.trim());   // Email
+      formData.append('entry.2086418675', country.value);         // Country
+      formData.append('entry.354540709', product.value);         // Product Interest
+      formData.append('entry.1997773229', message.value.trim());  // Message
+
+      // Submit via fetch (no-cors)
+      fetch(googleFormUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: formData.toString()
+      })
+      .then(() => {
+        handleFormSuccess();
+      })
+      .catch((err) => {
+        console.warn('Direct fetch error, fallback submitting via iframe:', err);
+        // Fallback: submit via hidden iframe
+        submitViaIframe();
+      });
+
+      // Secondary fallback trigger after 800ms
       setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        btn.style.color = '';
-        btn.disabled = false;
+        if (btn.textContent === 'Sending Inquiry...') {
+          handleFormSuccess();
+        }
+      }, 1000);
+
+      function handleFormSuccess() {
+        btn.textContent = '✓ Inquiry Sent Successfully!';
+        btn.style.background = '#28a745';
+        btn.style.color = '#fff';
+        btn.style.opacity = '1';
         form.reset();
-      }, 3000);
+
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.style.color = '';
+          btn.disabled = false;
+        }, 4000);
+      }
+
+      function submitViaIframe() {
+        let iframe = document.getElementById('hidden_iframe');
+        if (!iframe) {
+          iframe = document.createElement('iframe');
+          iframe.name = 'hidden_iframe';
+          iframe.id = 'hidden_iframe';
+          iframe.style.display = 'none';
+          document.body.appendChild(iframe);
+        }
+        
+        const tempForm = document.createElement('form');
+        tempForm.action = googleFormUrl;
+        tempForm.method = 'POST';
+        tempForm.target = 'hidden_iframe';
+
+        const fields = {
+          'entry.1049015684': name.value.trim(),
+          'entry.180032542': company.value.trim(),
+          'entry.1421793675': email.value.trim(),
+          'entry.2086418675': country.value,
+          'entry.354540709': product.value,
+          'entry.1997773229': message.value.trim()
+        };
+
+        for (const [key, val] of Object.entries(fields)) {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = key;
+          input.value = val;
+          tempForm.appendChild(input);
+        }
+
+        document.body.appendChild(tempForm);
+        tempForm.submit();
+        setTimeout(() => document.body.removeChild(tempForm), 1000);
+      }
     }
   });
 
